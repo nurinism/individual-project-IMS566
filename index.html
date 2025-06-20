@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawtner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <style>
+        :root {
+            --primary: white;
+            --secondary: black;
+            --dark: #2c3e50;
+            --light: white;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .text-primary {
+            color: var(--secondary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .hero-section {
+            background: url('images/header.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+        }
+        
+        .pet-card {
+            transition: all 0.3s ease;
+            border: none;
+            overflow:auto;
+        }
+        
+        .pet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .pet-img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: white;
+            border-color: white;
+        }
+        
+        .adoption-steps {
+        background-color: #fff;
+        }
+    
+        .steps-list {
+            max-width: 500px;
+        }
+    
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+    
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+    
+        .step-content h3 {
+            color: #2c3e50;
+            margin-bottom: 0.25rem;
+        }
+    
+        .step-content p {
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+    
+        @media (max-width: 992px) {
+            .steps-list {
+                max-width: 100%;
+        }
+        
+            .col-lg-6.text-lg-end {
+                text-align: center !important;
+                margin-top: 3rem;
+            }
+        }
+           .faq-section {
+            padding: 80px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .accordion {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .accordion-button {
+            background-color: transparent;
+            padding: 25px 0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            box-shadow: none;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+        
+        .accordion-button::after {
+            background-size: 1rem;
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        .accordion-body {
+            padding: 0 0 25px 0;
+            color: var(--accent-color);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+ 
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 60px 20px;
+            }
+            
+            .faq-title {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
+            
+            .accordion-button {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h1 class="mb-0"><i class="fas fa-paw me-2"><img src="images/logo.png" width="100" height="100"></i>Pawtner.</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pets.html">Pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="staff.html">Staff</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="hero-section d-flex align-items-center text-white">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">Find Your New Best Friend</h1>
+            <p class="lead fs-4 mb-5">Our furry friends are ready to live with you.</p>
+        </div>
+    </header>
+        <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 fw-bold mb-3">Why Adopt From Us?</h2>
+                    <p class="lead">We provide exceptional care and matching services to ensure perfect forever homes</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                     <h3>Compassionate Care</h3>
+                        <p>All pets receive veterinary checkups, vaccinations, and loving attention from our staff.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <h3>Perfect Matching</h3>
+                        <p>We take time to understand your lifestyle to match you with the ideal pet companion.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="text-center p-4">
+                        <h3>Lifetime Support</h3>
+                        <p>Post-adoption support and training resources to ensure a smooth transition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pets py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold">Featured Pets</h2>
+                    <p class="lead">These wonderful animals are looking for their forever homes</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="pet-card h-100">
+                        <img src="images/dog1.png" class="pet-img w-100" alt="Buddy the Dog">
+                        <div class="card-body">
+                            <h3 class="card-title">Buddy</h3>
+                            <p class="text-muted">Golden Retriever • 2 years</p>
+                            <p>Friendly and energetic, great with kids and other dogs.</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="pet-card h-100">
+                    <img src="images/cat1.png" class="pet-img w-100" alt="Whiskers the Cat">
+                        <div class="card-body">
+                            <h3 class="card-title">Whiskers</h3>
+                            <p class="text-muted">British Shorthair • 3 years</p>
+                            <p>Calm and affectionate, loves to cuddle and nap in sunny spots.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="pet-card h-100">
+                    <img src="images/dog2.png" class="pet-img w-100" alt="Leo the Dog">
+                        <div class="card-body">
+                            <h3 class="card-title">Leo</h3>
+                            <p class="text-muted">Golden Retriever • 4 years</p>
+                            <p>Intelligent and loyal, needs an active home with experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="pet-card h-100">
+                    <img src="images/cat2.png" class="pet-img w-100" alt="Mittens the Cat">
+                        <div class="card-body">
+                            <h3 class="card-title">Mittens</h3>
+                            <p class="text-muted">British Shorthair • 6 months</p>
+                            <p>Playful kitten, full of energy and curiosity.</p>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="text-center mt-5">
+                <a href="pets.html" class="btn btn-outline-primary btn-lg">View All</a>
+            </div>
+        </div>
+    </section>
+<section class="adoption-steps py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">Ready to Adopt?</h2>
+                <p class="lead mb-5">Our simple 4-step process makes adoption easy and rewarding.</p>
+                
+                <div class="steps-list">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Application</h3>
+                            <p>Fill out our adoption application form</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Counselor Meeting</h3>
+                            <p>Meet with an adoption specialist</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Meet & Greet</h3>
+                            <p>Visit with your potential pet</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <div class="step-content">
+                            <h3 class="h5 fw-bold">Finalization</h3>
+                            <p>Complete paperwork and bring your pet home</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="process.html" class="btn btn-primary mt-4">Learn More</a>
+            </div>
+            
+            <div class="col-lg-6 text-lg-end">
+                <img src="images/process.jpg" 
+                     alt="Happy cats" 
+                     class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="faq-section">
+        <h2 class="faq-title">FAQ</h2>
+        
+        <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        What are requirement to adopt a pet?
+                    </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Typically includes being at least 18 years old, providing valid ID, proof of address, and sometimes landlord approval (if renting).
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Can I adopt if I live in an apartment?
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, but some shelters may have breed or size restrictions. Check your lease for pet policies.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I return the pet?
+                    </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <img src="images/noreturn.gif" alt="no retun">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How do I care for my adopted pet?
+                    </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Showered them with love and care.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        How to contact?
+                    </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Contact us at 012-34567890 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Pawtner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
